@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+body{
+	margin:0;
+	padding:0;
+}
+
+nav{
+	background-color:lightgray;
+	box-shadow: 2px 2px 10px gray;
+}
+
+nav ul{
+	list-style: none;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+nav li{
+	display: inline-block;
+}
+
+nav a{
+	text-decoration: none;
+	font-size: 12px;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 5px gray;
+	color: black;
+	display: block;
+	width: 150px;
+	padding: 15px;}
+
+nav a:hover{
+	background-color:gray;
+	color: white;
+	text-shadow: 1px 1px 5px black;
+	transition: 0.5s;
+}
+
+input[type="submit"] {
+color: white;
+font-family: "Helvatica";
+background-color: gray;
+border-style: none;
+width: 72px;
+height: 30px;
+}
+input[type="submit"]:hover {
+box-shadow: 1px 1px 10px darkgray;
+}
+
+

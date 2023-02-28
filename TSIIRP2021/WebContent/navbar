@@ -1,0 +1,33 @@
+	<c:set var="dir" value="login"/> 
+	<c:set var="texto" value="Iniciar Sesión"/>
+	<c:if test="${u!=null}">
+		<c:set var="dir" value="logout"/>
+		<c:set var="texto" value="Finalizar Sesión"/>
+	</c:if>
+	<nav>
+		<ul>
+			<li><a href="Controlador?accion=inicio">Inicio</a></li>
+			<li><a href="Controlador?accion=listar">Listar</a></li>
+			<li><a href="Controlador?accion=nuevo">Registrar Persona</a></li>
+			<li><a href="Controlador?accion=reporte">Generar PDF</a></li>
+			<li><a href="Controlador?accion=${dir}">${texto}</a></li>
+			<c:if test="${u==null}">
+				<li><a href="Controlador?accion=nuevoUsuario">Registrarse</a></li>
+			</c:if>
+			<!--<li><a href="Controlador?accion=logout">Finalizar Sesión</a></li>			
+			<li><a href="Controlador?accion=listarPais">Listar Pais</a></li>
+			<li><a href="Controlador?accion=nuevoPais">Registrar Pais</a></li>-->
+		</ul>
+		<form action="Controlador" method="POST">
+			<div>
+				<input type="search" name="ci" required placeholder="Ingrese Nro CI."/><input type="submit" name="accion" value="Buscar"/>
+			</div>
+		</form>
+	</nav>
+	
+	<c:if test="${error!=null}">
+		<p>${error}</p>
+	</c:if>
+	<c:if test="${u!=null}">
+		<p>Usuario: ${u.usuario}</p>
+	</c:if>

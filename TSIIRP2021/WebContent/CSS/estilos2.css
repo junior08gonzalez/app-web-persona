@@ -1,0 +1,25 @@
+@charset "ISO-8859-1";
+#lista_persona{
+	width:100%;
+}
+
+#lista_persona, th, td{
+	border: 1px solid black;
+	border-collapse: collapse;
+	padding: 5px;
+}
+
+th{
+	color:#f1faee;
+	background-color:#1d3557;
+}
+
+tr:nth-child(even){
+	background-color:#f1faee;
+}
+
+tr:nth-child(odd){
+	background-color:#a8dace;
+}
+
+
